@@ -1,17 +1,10 @@
 
-let lista = document.createElement('ul');
+let a = document.querySelector("footer a");
 
-for(let i = 0; i < 5; i++){
+console.log(a.getAttribute('href'));
 
-    let item = document.createElement('li');
+let link = "https://www.horadecodar.com.br ";
 
-    let texto = document.createTextNode(`item criado` + i);
+a.setAttribute('href', link);
 
-    item.appendChild(texto);
-
-    lista.appendChild(item);
-}
-
-let container = document.querySelector('.container');
-
-container.appendChild(lista);
+console.log(a.getAttribute('href'));
