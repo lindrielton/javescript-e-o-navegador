@@ -8,7 +8,7 @@ function msg(){
 
 btn.addEventListener("click",msg);
 
-btn2.addEventListener("click", function(){
+btn.addEventListener("click", function(){
     btn.removeEventListener("click", msg);
 })
 
