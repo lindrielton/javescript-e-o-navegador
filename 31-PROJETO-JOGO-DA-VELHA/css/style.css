@@ -79,9 +79,9 @@ h1{
 
 
 
-/* .hide{
+ .hide{
    visibility: hidden;
-}*/
+}
 
 /*placar*/
 
@@ -126,6 +126,5 @@ h1{
     font-size: 50px;
     background-color: #000;
     color: white;
-    display: none;
-
+   
 }
