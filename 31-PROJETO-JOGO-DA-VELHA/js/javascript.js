@@ -37,14 +37,41 @@ for(let i = 0; i < boxes.length; i++){
 
        if(player1 == player2){
           player1++;
-       }else{
-        player2++;
+       }if(secundPlay == "ai-player"){
+            conputerPlayer();
+            player2++
        }
+
+
+    
+
+            // funçao para executar jogada
+            
+    
 
        checkWincondition();  
     }
              
     });
+
+    // evento para saber se é 2 players ou ia
+
+    for(let i = 0; i < buttons.length; i++){
+          buttons[i].addEventListener("click", function(){
+
+             secundPlay = this.getAttribute("id");
+
+          for(let j = 0; j < buttons.length; j++){
+             buttons[j].style.display = "none";
+          }
+
+          setTimeout(function(){
+            let container = document.querySelector("#container");
+            container.classList.remove("hide");
+          })
+
+          });
+    }
 
     //ver quem vai jogar
     function checckEl(player1, player2){
@@ -253,6 +280,36 @@ function declarewinner(winner){
 
      let boxToRemove = document.querySelectorAll(".box div");
      for(let i = 0; i < boxToRemove.length; i++){
-        boxToRemove[i].parentNode.removeChild(boxToRemove[i]);
+        boxToRemove[i].parentNode.remove(boxToRemove[i]);
      } 
 
+     //executando a logica da jogada do cpu
+
+     function conputerPlayer(){
+
+       let clone0 = o.cloneNode(true);
+       let couter = 0;
+       let filled = 0;
+            // so vai preenchrer se o filho estiver vasio
+            for(let i = 0; i < boxes.length; i++){
+                let randomNumber = Math.floor(Math.random()* 5);
+                if(boxes[i].childNodes[0] == undefined){
+                    if(randomNumber <= 1){
+                        boxes[i].appendChild(clone0);
+                        couter++;
+                        break;
+                    }
+                    //checagem de quantos estão preenchidas
+                }else{
+                    filled++;
+                }
+                
+            }
+
+            if(couter == 0 && filled < 9){
+                conputerPlayer();
+            }
+     }     
+
+
+              
