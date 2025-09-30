@@ -17,4 +17,4 @@ window.addEventListener("keyup", function(e){
         console.log("soltou a tecla enter");
 
     }
-})
+});

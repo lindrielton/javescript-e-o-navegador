@@ -3,7 +3,7 @@ let novoElemento = document.createElement('p');
 let texto = document.createTextNode('texto inserido');
 
 novoElemento.appendChild(texto);
-
+novoElemento.style.background = "blue"
 
 let p = document.querySelector('#paragrafo');
 let pai = p.parentNode

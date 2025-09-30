@@ -274,6 +274,7 @@ function declarewinner(winner){
         player1 = 0;
         player2 = 0;
      });
+     
     
 
      //remove x e o 

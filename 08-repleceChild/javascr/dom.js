@@ -26,3 +26,5 @@ let paiDoElemento = referencia.parentNode;
 
 paiDoElemento.replaceChild(elementoNovo,referencia); 
 //ele subistituio o link pela palavra;
+
+let p = document.get
